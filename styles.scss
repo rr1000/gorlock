@@ -1,0 +1,198 @@
+.cf:before,
+.cf:after{
+    content: " ";
+    display: table;
+}
+.cf:after{
+    clear: both;
+}
+.cf{
+    *zoom: 1;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{
+    display: block;
+}
+body{
+    line-height: 1;
+    font-family: sans-serif;
+}
+ol, ul{
+    list-style: none;
+}
+blockquote, q{
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+    content: '';
+    content: none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*, *:after, *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* ~~~~~ */
+/* ~~~~~ */
+/* ~~~~~ */
+@import url('//fonts.googleapis.com/css?family=Rubik:300,400,400i,500,700,900');
+$f_sans: 'Rubik', sans-serif;
+/* ~~~~~ */
+/* ~~~~~ */
+/* ~~~~~ */
+$c_green: #58DD87;
+$c_text: #887F96;
+$c_slate: #47444D;
+$c_light-bg: #F2F5FB;
+$c_border: #C4CBD6;
+$c_white: #fff;
+/* ~~~~~ */
+/* ~~~~~ */
+/* ~~~~~ */
+body{
+    background-color: #fff;
+    border-top: 5px solid $c_green;
+    font-size: 14px;
+    color: $c_slate;
+    font-family: $f_sans;
+    a{
+        text-decoration: none;
+        color: $c_slate;
+    }
+}
+/* ~~~~~ */
+/* ~~~~~ */
+/* ~~~~~ */
+.main-header{
+    padding: 30px;
+    @extend .cf;
+    .logo{
+        display: block;
+        float: left;
+        background-image: url('/logo.png');
+        width: 65px;
+        height: 34px;
+        background-size: 65px 34px;
+    }
+    .doggy{
+        position: absolute;
+        background-image: url('/doggy.png');
+        width: 50px;
+        height: 45px;
+        margin-left: -25px;
+        left: 50%;
+        background-size: 50px 45px;
+    }
+    nav{
+        float: right;
+        a.cta{
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: $c_light-bg;
+            border: 1px solid $c_border;
+            cursor: not-allowed;
+        }
+    }
+}
+/* ~~~~~ */
+/* ~~~~~ */
+/* ~~~~~ */
+.main-masthead{
+    padding: 90px 30px;
+    max-width: 580px;
+    margin: auto;
+    h1{
+        font-size: 60px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+        padding: 0px 0px 30px 0px;
+    }
+    h2{
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 0px 0px 30px 0px;
+        text-align: center;
+        max-width: 400px;
+        margin: 0px auto;
+    }
+    p{
+        padding: 30px;
+        text-align: left;
+        max-width: 400px;
+        margin: 0px auto;
+        background-color: $c_light-bg;
+        color: $c_text;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    a.cta{
+        display: block;
+        max-width: 250px;
+        margin: 30px auto 0px auto;
+        color: darken($c_green, 35%);
+        background-color: $c_green;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+    }
+}
+/* ~~~~~ */
+/* ~~~~~ */
+/* ~~~~~ */
+.hr{
+    background-image: url('/divider.png');
+    width: 82px;
+    height: 20px;
+    background-size: 82px 20px;
+    margin: 0px auto;
+}
+/* ~~~~~ */
+/* ~~~~~ */
+/* ~~~~~ */
+.main-footer{
+    @extend .main-header;
+    a{
+        text-align: center;
+        display: block;
+        max-width: 80px;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0px auto 20px auto;
+        border: 1px solid $c_border;
+    }
+    p{
+        text-align: center;
+        color: $c_text;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
